@@ -9,9 +9,10 @@ import streamlit.components.v1 as components
 #     todos.append(todo)
 #     functions.write_todos(todos_arg=todos)
 
-
-components.iframe("https://docs.google.com/document/d/e/2PACX-1vSr0mYa9_L0qGm2OPnqBHKDkBGtKfoj88uEkoCe4-fMRzia7Tg8pPvY6zIeSGgF_RHq6hQgNG2N8U2M/pub?embedded=true", height=1000)
-
+HtmlFile = open("Beko.html", 'r', encoding='utf-8')
+source_code = HtmlFile.read()
+print(source_code)
+components.html(source_code, height=1000)
 
 # st.title("Let’s support The Home For Single Mothers in Łódź.")
 # st.subheader("This is my todo app.")
